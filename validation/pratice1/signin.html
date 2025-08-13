@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="div1">
+        
+    <input id="id1" type="name" placeholder=" Enter name"/></br>
+    <input id="id2" type="email" placeholder=" Enter Email"/></br>
+    <input  id="id3"type="number" placeholder="enter phone number"/></br>
+    <input id="id4" type="password" placeholder="enter password"/></br>
+    <input id="id5"type="password" placeholder="conform password"/>
+    <button  onclick=fun() class="button1"> sign up </button>
+
+    </div>
+
+    <style>
+       .div1{
+        display: flex;
+        flex-direction: column;
+        border: 2px solid rgb(138, 80, 80);
+        width:200px;
+        padding:5px 10px 5px 10px;
+        background-color: beige;
+        margin-left: 40%;
+        
+       }
+       .button1{
+        background-color: rgb(81, 81, 150);
+        margin-top: 20px;
+        width:70px;
+        margin-left: 30%;
+        cursor: pointer;
+        color: white;
+        border-radius: 5px;
+    
+       }
+
+
+    </style>
+    <script>
+        function fun(){
+            let a=  document.getElementById("id1").value;
+            let b=  document.getElementById("id2").value;
+            let c=  document.getElementById("id3").value;
+            let d=  document.getElementById("id4").value;
+            let e=  document.getElementById("id5").value;
+            
+            
+
+            if(a===''||  b === ''|| c === ''|| d === '' || e === ''){
+
+                alert("please fill all the columns")
+            }else if(d != e){
+
+                alert("please check the password")
+            }
+            else{
+                alert("signup successfull")
+                let siemail=localStorage.setItem("user1",b)
+                let sipass=localStorage.setItem("user2",d)
+                window.location.href="login.html"
+            }
+            
+
+
+        }
+        
+    </script>
+    
+    
+</body>
+</html>

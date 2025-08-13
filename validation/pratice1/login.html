@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <div class="div1">  
+    <input id="id1" type="email" placeholder=" Enter Email"/></br>
+    <input id="id2" type="password" placeholder="enter password"/></br>
+    <button  onclick="fun1()" class="button1"> sign up </button>
+
+    </div>
+    <style>
+               .div1{
+        display: flex;
+        flex-direction: column;
+        border: 2px solid rgb(138, 80, 80);
+        width:200px;
+        padding:5px 10px 5px 10px;
+        background-color: beige;
+        margin-left: 40%;
+        
+       }
+       .button1{
+        background-color: rgb(81, 81, 150);
+        margin-top: 20px;
+        width:70px;
+        margin-left: 30%;
+        cursor: pointer;
+        color: white;
+        border-radius: 5px;
+       }
+    
+    </style>
+    <script>
+
+        function fun1(){
+            let emal=document.getElementById("id1").value
+            let pas=document.getElementById("id2").value
+            let a=localStorage.getItem("user1")
+            let b=localStorage.getItem("user2")
+            if(emal ==a && pas == b){
+                 alert('login successfull')
+                 window.location.href="homepage.html"
+                
+            }else{
+                alert("please enter correct email or password")  
+            }
+        }
+    </script>
+    
+</body>
+</html>

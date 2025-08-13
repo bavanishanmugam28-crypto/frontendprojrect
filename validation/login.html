@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="signin.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="signinpage">
+    <input type="text" placeholder="User name" class="input-box" id="input3"><br/>
+    <input type="password" placeholder="password"class="input-box" id="input4"><br/>
+    <button onclick="handle()"  class="sign-button"> Signup</button>
+    </div>
+
+    <script>
+   function handle(){
+     let uname= document.getElementById("input3").value
+       let password= document.getElementById("input4").value
+       let signusername=localStorage.getItem("username")
+       let signpassword=localStorage.getItem("password")
+     
+       
+       if(uname ===''||password ===''){
+        alert('please fill all the fields');
+        
+       }else if(signusername==uname && signpassword==password){
+        alert("login success")
+        window.location.href="homepage.html"
+       }
+       
+       else{
+        alert('invalid username or password')
+        
+        
+       }
+
+
+}
+
+    </script>
+    
+</body>
+</html>

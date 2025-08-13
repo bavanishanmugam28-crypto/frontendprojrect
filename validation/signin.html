@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="signin.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="signinpage">
+    <input type="text" placeholder="First name" class="input-box" id="input1"><br/>
+    <input type="text" placeholder="Last name" class="input-box" id="input2"><br/>
+    <input type="text" placeholder="User name" class="input-box" id="input3"><br/>
+    <input type="password" placeholder="password"class="input-box" id="input4"><br/>
+    <input type="number" placeholder="phonenumber"class="input-box" id="input5"><br/>
+    <input type="email" placeholder="Email id" class="input-box" id="input6"><br/>
+    <button  onclick="handle()"  class="sign-button"> Signup</button>
+    </div>
+    <script>
+        function handle(){
+       let fname= document.getElementById("input1").value.trim();
+       let lname= document.getElementById("input2").value.trim();
+       let uname= document.getElementById("input3").value.trim();
+       let password= document.getElementById("input4").value.trim();
+       let phn= document.getElementById("input5").value.trim();
+       let emalname= document.getElementById("input6").value .trim();
+
+      
+
+
+       if(fname ==='' || lname === '' || uname ===''||password ==='' || phn ==='' ||emalname ===''){
+        alert('please fill all the fields');
+        
+       }
+    
+       else if (password.length > 7){
+        alert("Password is exceeding more than 7 characters!")
+        
+       }
+       else{
+        alert('Signup success');
+        localStorage.setItem("username",uname)
+        localStorage.setItem("password" ,password)
+        window.location.href="login.html"
+        
+       }
+
+        }       
+
+    </script>
+
+    
+</body>
+</html>

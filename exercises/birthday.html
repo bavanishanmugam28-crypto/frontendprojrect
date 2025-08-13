@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<input type="text" id="age">
+<button onclick="getdate()"> Get your age</button>
+<h1 id="display"> </h1>
+</body>
+<script>
+    function getdate(){
+    let a=document.getElementById('age').value
+    let b= new Date().getFullYear()
+    let c=(b-a)
+    document.getElementById('display').textContent="you are "+ c +" years old"
+
+    }
+
+
+
+</script>
+</html>
